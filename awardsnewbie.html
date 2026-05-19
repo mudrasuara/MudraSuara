@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awards</title>
+  <link rel="stylesheet" href="awardsnewbie.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="main.html" class="icon icon-1">🏠</a>
+
+    <div class="icon-group">
+      <a href="main.html" class="icon">📚</a>
+      <a href="badge.html" class="icon">🏆</a>
+      <a href="profile.html" class="icon">👤</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="header">
+      <div class="stats">
+        <div class="stat">🔥 1</div>
+        <div class="stat">🏆 100 points</div>
+      </div>
+    </div>
+
+    <div class="awards-section">
+
+      <div class="title">
+        <h1>Awards</h1>
+      </div>
+
+      <div class="content">
+
+        <!-- BADGES -->
+        <div class="badges">
+
+          <!-- UNLOCKED -->
+          <div class="badge active" data-title="Bronze" data-desc="First milestone unlocked">
+            <div class="circle bronze"></div>
+            <p>Bronze</p>
+            <p class="desc">First milestone unlocked</p>
+          </div>
+
+          <!-- LOCKED -->
+          <div class="badge locked" data-title="Silver" data-desc="Locked until Bronze completed">
+            <div class="circle silver"></div>
+            <p>Silver 🔒</p>
+            <p class="desc">Locked</p>
+          </div>
+
+          <div class="badge locked" data-title="Gold" data-desc="Locked until Silver completed">
+            <div class="circle gold"></div>
+            <p>Gold 🔒</p>
+            <p class="desc">Locked</p>
+          </div>
+
+          <div class="badge locked" data-title="Diamond" data-desc="Locked until Gold completed">
+            <div class="circle diamond"></div>
+            <p>Diamond 🔒</p>
+            <p class="desc">Locked</p>
+          </div>
+
+        </div>
+
+        <!-- POPUP -->
+        <div class="popup hidden">
+
+          <span class="close">✕</span>
+
+          <div class="circle large bronze" id="popupCircle"></div>
+
+          <h2 id="popupTitle">Bronze</h2>
+          <p id="popupDesc">First milestone unlocked</p>
+
+          <button>Download</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<!-- JS -->
+<script>
+  const badges = document.querySelectorAll(".badge");
+
+  const popup = document.querySelector(".popup");
+  const popupTitle = document.getElementById("popupTitle");
+  const popupDesc = document.getElementById("popupDesc");
+  const popupCircle = document.getElementById("popupCircle");
+
+  const closeBtn = document.querySelector(".popup .close");
+
+  badges.forEach(badge => {
+    badge.addEventListener("click", () => {
+
+      // ignore locked badges (extra safety)
+      if (badge.classList.contains("locked")) return;
+
+      // active state
+      badges.forEach(b => b.classList.remove("active"));
+      badge.classList.add("active");
+
+      // update popup
+      popupTitle.textContent = badge.dataset.title;
+      popupDesc.textContent = badge.dataset.desc;
+      popupCircle.className = "circle large " + badge.dataset.title.toLowerCase();
+
+      popup.classList.remove("hidden");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+</script>
+
+</body>
+</html>

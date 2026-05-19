@@ -1,0 +1,218 @@
+/* =========================================================
+   🌌 GLOBAL RESET & BASE
+========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: #FFFCED;
+}
+
+/* =========================================================
+   📱 MAIN CONTAINER
+========================================================= */
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* ✅ THIS centers vertically */
+
+  padding: 20px;
+}
+/* =========================================================
+   🎯 TOP SECTION
+========================================================= */
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+  text-align: center;
+
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #290682;
+}
+
+/* =========================================================
+   🖼️ GIF
+========================================================= */
+.image-box {
+  width: 260px;
+  height: 260px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* =========================================================
+   🔥 STREAK CARD
+========================================================= */
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 0.85rem;
+  color: #290682;
+}
+
+.day span {
+  font-size: 1.4rem;
+  opacity: 0.3;
+}
+
+/* ACTIVE DAY */
+.day .active {
+  opacity: 1;
+}
+
+/* =========================================================
+   🔥 FOOTER BUTTON BAR
+========================================================= */
+.bottom-bar {
+  position: fixed;
+  bottom: 14px;
+  left: 0;
+  width: 100%;
+
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+/* INNER WRAPPER */
+.footer-wrapper {
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 0px;
+}
+
+/* BUTTON BASE */
+.footer-btn {
+  width: 200px;
+  padding: 0.9rem 0;
+
+  border-radius: 14px;
+
+  font-weight: 600;
+  font-size: 1.1rem;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* LEFT BUTTON */
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #8E6BDB;
+  color: #8E6BDB;
+
+  box-shadow: 0 5px 0 #6d4fc2;
+}
+
+.secondary-btn:hover {
+  background: rgba(142, 107, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+.secondary-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #6d4fc2;
+}
+
+/* RIGHT BUTTON */
+.primary-btn {
+  background: #8E6BDB;
+  border: none;
+  color: #fff;
+
+  box-shadow: 0 5px 0 #6d4fc2;
+}
+
+.primary-btn:hover {
+  background: #9d7af0;
+  transform: translateY(-2px);
+}
+
+.primary-btn:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #6d4fc2;
+}
+
+#retry-btn {
+  margin-left: -32px; /* 🔥 move more left */
+}
+
+#next-btn {
+  margin-right: -32px; /* 🔥 move more right */
+}
+/* =========================================================
+   📱 MOBILE
+========================================================= */
+@media (max-width: 600px) {
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .image-box {
+    width: 200px;
+    height: 200px;
+  }
+
+  .footer-wrapper {
+    padding: 0 20px;
+  }
+
+  .footer-btn {
+    width: 140px;
+    font-size: 1rem;
+  }
+}

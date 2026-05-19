@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #FFFCED;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 100px;
+  background: #EFE8D8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background: #5B3E96;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-1 {
+  margin-bottom: 80px;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.stat {
+  font-weight: 500;
+}
+
+/* TITLE */
+h1 {
+  color: #5B3E96;
+  margin-bottom: 40px;
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  width: 350px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #DCD4E6;
+}
+
+/* PROFILE CARD */
+.profile h2 {
+  color: #5B3E96;
+}
+
+.profile p {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* LOGOUT */
+.logout {
+  background: #DCD4E6;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.right {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 40px; /* increase this */
+}
+
+/* STREAK CARD */
+.streak-card {
+  width: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #DCD4E6;
+}
+
+/* TOP (PURPLE) */
+.streak-top {
+  background: #5B3E96;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* ICONS */
+.streak-icons {
+  background: #5B3E96;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 12px;
+}
+
+.streak-icons span {
+  opacity: 0.4;
+}
+
+.streak-icons .active {
+  opacity: 1;
+}
+
+/* BOTTOM TEXT */
+.streak-bottom {
+  padding: 15px;
+  font-size: 14px;
+  color: #5B3E96;
+}
