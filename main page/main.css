@@ -1,0 +1,336 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #FFFCED;
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 100px;
+  height: 100vh;
+  background: #EFE8D8;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  background: #5B3E96;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+
+  box-shadow: 0 4px 0 #3E2A6E;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  transform: translateY(-2px);
+}
+
+.icon-1 {
+  margin-bottom: 80px;
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 40px 40px 40px 140px;
+}
+
+/* ================= HEADER ================= */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  color: #3D2C6D;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  background: #5B3E96;
+  border-radius: 50%;
+}
+
+.welcome {
+  font-size: 12px;
+  color: #8A8A8A;
+}
+
+.user-text h2 {
+  color: #3D2C6D;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  display: flex;
+  margin-top: 30px;
+  gap: 80px;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+h3 {
+  margin-bottom: 12px;
+  color: #3D2C6D;
+}
+
+/* ================= LESSON ================= */
+.lesson-wrapper {
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+.lesson-card {
+  background: #CFC6E6;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* TOP */
+.lesson-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+}
+
+.lesson-card h2 {
+  margin: 10px 20px 0;
+  color: #3D2C6D;
+}
+
+.lesson-info {
+  font-size: 12px;
+  color: #555;
+  margin: 5px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* BOTTOM BAR */
+.lesson-bottom {
+  background: #5B3E96;
+  height: 48px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  position: relative;
+  top: -1px;
+}
+
+/* TAG */
+.tag {
+  background: #8E7DBE;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+/* PROGRESS */
+.progress-bar {
+  width: calc(100% - 40px);
+  margin: 12px 20px 20px;
+  height: 10px;
+  background: #D9D9D9;
+  border-radius: 10px;
+}
+
+.progress {
+  height: 100%;
+  background: #5B3E96;
+  border-radius: 10px;
+}
+
+/* ================= BUTTON (GLOBAL) ================= */
+button {
+  background: #5B3E96;
+  color: white;
+  border: none;
+
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+
+  box-shadow: 0 4px 0 #3E2A6E;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= LESSON ITEM ================= */
+.lesson-item {
+  background: #CFC6E6;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 64px; /* ✅ fixed height */
+  padding-left: 20px; /* only left padding */
+
+  box-shadow: 0 6px 0 #B9AECF;
+  margin-bottom: 15px;
+
+  overflow: hidden; /* important for full-height button */
+  transition: 0.2s;
+}
+
+.lesson-item:hover {
+  transform: translateY(-2px);
+}
+
+/* ✅ FULL HEIGHT BUTTON */
+.lesson-item button {
+  height: 100%;
+  width: 70px;
+
+  border-radius: 0 15px 15px 0; /* match card edge */
+
+  font-size: 18px;
+
+  box-shadow: none; /* cleaner look */
+}
+
+/* ================= DROPDOWN ================= */
+.lesson-list {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.lesson-list.show {
+  max-height: 1200px;
+  margin-top: 25px;
+}
+
+/* ================= BADGES ================= */
+.badges {
+  display: grid;
+  grid-template-columns: repeat(2, 90px);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.badge {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #E0DBD2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge.active {
+  background: #C47A3C;
+}
+
+/* ================= ICON TEXT ================= */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.material-icons {
+  font-size: 16px;
+  color: #5B3E96;
+}
+
+.dot {
+  opacity: 0.5;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .main {
+    padding-left: 90px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    padding: 20px;
+  }
+}

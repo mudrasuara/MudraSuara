@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MATERIAL ICONS -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <a href="#" class="icon icon-1">🤟</a>
+
+    <div class="icon-group">
+      <a href="main.html" class="icon">📚</a>
+      <a href="awards.html" class="icon">🏆</a>
+      <a href="profile.html" class="icon">👤</a>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="header">
+      <div class="stats">
+        <div class="stat">🔥 1</div>
+        <div class="stat">🏆 100 points</div>
+      </div>
+
+      <div class="user">
+        <div class="avatar"></div>
+        <div class="user-text">
+          <div class="welcome">Selamat Datang</div>
+          <h2>Jenifer A</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- LEFT -->
+      <div class="left">
+        <h3>Pembelajaran Hari ini</h3>
+
+        <!-- ================= BAB 1 ================= -->
+        <div class="lesson-wrapper">
+
+          <div class="lesson-card">
+            <div class="lesson-top">
+              <span class="tag">Bab 1</span>
+              <button class="play-btn">▶</button>
+            </div>
+
+            <h2>Abjad</h2>
+
+            <div class="lesson-info">
+              <span class="info-item">
+                <span class="material-icons">menu_book</span>
+                26 abjad
+              </span>
+
+              <span class="dot">|</span>
+
+              <span class="info-item">
+                <span class="material-icons">schedule</span>
+                60 menit
+              </span>
+            </div>
+
+            <!-- ✅ FIXED -->
+            <div class="progress-bar">
+              <div class="progress" id="bab1-progress"></div>
+            </div>
+
+            <div class="lesson-bottom" onclick="toggleLessons('sub1','arrow1')">
+              <span id="arrow1" class="arrow">▾</span>
+            </div>
+          </div>
+
+          <div id="sub1" class="lesson-list">
+
+            <div class="lesson-item">
+              <span>A–E</span>
+              <button onclick="window.location.href='../Abjad_Lesson/abjad_A-E.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>F–J</span>
+              <button onclick="window.location.href='../Abjad_Lesson/abjad_F-J.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>K–O</span>
+              <button onclick="window.location.href='../Abjad_Lesson/abjad_K-O.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>P–T</span>
+              <button onclick="window.location.href='../Abjad_Lesson/abjad_P-T.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>U-Z</span>
+              <button onclick="window.location.href='../Abjad_Lesson/abjad_U-Z.html'">▶</button>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- ================= BAB 2 ================= -->
+        <div class="lesson-wrapper">
+
+          <div class="lesson-card">
+            <div class="lesson-top">
+              <span class="tag">Bab 2</span>
+              <button class="play-btn">▶</button>
+            </div>
+
+            <h2>Mengenali Kata Sapaan</h2>
+
+            <div class="lesson-info">
+              <span class="info-item">
+                <span class="material-icons">menu_book</span>
+                20 kata
+              </span>
+
+              <span class="dot">•</span>
+
+              <span class="info-item">
+                <span class="material-icons">schedule</span>
+                45 menit
+              </span>
+            </div>
+
+            <!-- ✅ FIXED (IMPORTANT) -->
+            <div class="progress-bar">
+              <div class="progress" id="bab2-progress"></div>
+            </div>
+
+            <div class="lesson-bottom" onclick="toggleLessons('sub2','arrow2')">
+              <span id="arrow2" class="arrow">▾</span>
+            </div>
+          </div>
+
+          <div id="sub2" class="lesson-list">
+
+            <div class="lesson-item">
+              <span>Apa Kabar</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_apakabar.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Halo</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_halo.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Sampai Jumpa</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_sampai jumpa.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Sampai Ketemu Lagi</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_sampai ketemu lagi.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Selamat Pagi</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_selamat pagi.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Selamat Siang</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_selamat siang.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Selamat Sore</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_selamat sore.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Selamat Malam</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_selamat malam.html'">▶</button>
+            </div>
+
+            <div class="lesson-item">
+              <span>Selamat Tinggal</span>
+              <button onclick="window.location.href='../Kata Sapaan_Lesson/katasapaan_selamat tinggal.html'">▶</button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <h3>Badges</h3>
+
+        <div class="badges">
+          <div class="badge active"></div>
+          <div class="badge"></div>
+          <div class="badge"></div>
+          <div class="badge"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<script>
+
+// ================= DROPDOWN =================
+function toggleLessons(listId, arrowId) {
+  const sub = document.getElementById(listId);
+  const arrow = document.getElementById(arrowId);
+
+  sub.classList.toggle("show");
+  arrow.textContent = sub.classList.contains("show") ? "▴" : "▾";
+}
+
+// ================= LOAD PROGRESS =================
+window.onload = function () {
+
+  // ================= PROGRESS SYSTEM TOGGLE =================
+
+// 🔴 TURN OFF saving (RESET MODE)
+// localStorage.setItem("bab1Progress", 0);
+// localStorage.setItem("bab2Progress", 0);
+
+
+// 🟢 TURN ON saving (NORMAL MODE)
+const bab1 = localStorage.getItem("bab1Progress") || 0;
+const bab2 = localStorage.getItem("bab2Progress") || 0;
+
+
+// APPLY TO UI
+document.getElementById("bab1-progress").style.width = bab1 + "%";
+document.getElementById("bab2-progress").style.width = bab2 + "%";
+
+};
+
+</script>
+
+</body>
+</html>
